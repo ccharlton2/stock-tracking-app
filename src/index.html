@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Stocks</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stocks Info</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-content">
+        <h1 class="title">Stocks Info</h1>
+      </div>
+    </header>
+    <main>
+      <form id="search" class="search-api">
+        <div class="control">  <label for="searchTerm">Stock Symbol</label>
+            <input id="searchTerm" type="text" placeholder="ex: IBM" required>
+        </div>             
+        <button>search</button></div>                
+      </form>   
+     <!-- CONTAINER FOR SEARCH RESULTS -->
+      <aside id="results" class="stockInfo">      
+      </aside>           
+    </main>
+    <script src="js/index.js"></script>
+  </body>
 </html>
+
+
+ 
