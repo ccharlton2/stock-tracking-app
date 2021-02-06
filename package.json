@@ -1,0 +1,13 @@
+{
+  "name": "Assignment_1",
+  "version": "1.0.0",
+  "description": "Stock tracking app.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "Christian Charlton",
+  "license": "ISC"
+}
