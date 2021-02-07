@@ -16,7 +16,6 @@ function AVModel() {
 
   this.search = async function (queryParams) {
     // set up the url
-    console.log(queryParams.name);
     const name = queryParams.name;
     let url = new URL(this.apiBaseUrl);
 
