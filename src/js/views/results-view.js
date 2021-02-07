@@ -4,15 +4,16 @@ import Stock from '../models/stock.js'
 const stockView = `
 <aside class="stock">
   <header><h3 class="name"> <%= stockInfo.symbol %></h3></header>
-   
-  <ul class="details" >
-  <li>symbol: <span><%= stockInfo.symbol %></span></li>
-  <li>open: <span><%= stockInfo.open %></span></li>
-  <li>high: <span><%= stockInfo.high %></span></li>
-  <li>low: <span><%= stockInfo.low %></span></li>
-  <li>close: <span><%= stockInfo.close %></span></li>
-  <li>volume: <span><%= stockInfo.volume %></span></li>
-  </ul>
+  
+  <div class="card-layout">
+  symbol: <span class="row"><%= stockInfo.symbol %></span>
+  open: <span class="row"><%= stockInfo.open %></span>
+  high: <span class="row"><%= stockInfo.high %></span>
+  low: <span class="row"><%= stockInfo.low %></span>
+  close: <span class="row"><%= stockInfo.close %></span>
+  volume: <span class="row"><%= stockInfo.volume %></span>
+  </div>
+
 
 </aside>
 `;

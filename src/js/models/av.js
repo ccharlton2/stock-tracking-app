@@ -1,5 +1,5 @@
 function AVModel() {
-    this.apiBaseUrl = "https://www.alphavantage.co/";
+    this.apiBaseUrl = "https://www.alphavantage.co/query?";
   
     this.init = function () {
       const result = this.query("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=RFLPZF1898RN01VR");
@@ -12,19 +12,25 @@ function AVModel() {
         return res
       };
 
-    this.search = async function (searchStuff) {
+    this.search = async function (queryParams) {
     // set up the url
     // object destructuring
-    const {category, name} = {...searchStuff}
-    //let url = new URL(this.apiBaseUrl + category + '?')
-    let url = new URL("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=RFLPZF1898RN01VR")
+    console.log(queryParams.name);
+    const name = queryParams.name;
+    let url = new URL(this.apiBaseUrl)
 
-    const params = new URLSearchParams()
-    params.set('search', name)
-    url = url+params
+    const params = new URLSearchParams({
+      function: "TIME_SERIES_DAILY",
+      symbol: "symbol",
+      apikey: "RFLPZF1898RN01VR",
+    })
+
+    console.log(params.toString());
+    params.set('symbol', name)
+    url = url+params.toString()
+    console.log(url);
     const req = await fetch(url)
     const res = await req.json()
-    console.log(res["Meta Data"]);
     return res
     }
 }

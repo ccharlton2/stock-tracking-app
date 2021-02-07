@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Stock tracking app.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccharlton2/stock-tracking-app.git"
+},
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
@@ -16,6 +20,8 @@
     "@babel/preset-env": "^7.12.13"
   },
   "dependencies": {
-    "ejs": "^3.1.5"
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "ejs": "^3.1.5",
+    "postcss-import": "^14.0.0"
   }
 }

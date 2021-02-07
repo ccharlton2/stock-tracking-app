@@ -29,9 +29,10 @@ function SearchController(model, searchView, resultsView) {
         e.preventDefault();
         // no validation
 
+        console.log(e.currentTarget.searchTerm.value);
+
         // take form name values
         const queryParams = {
-            category:this.category,
             name:e.currentTarget.searchTerm.value
         }
         
