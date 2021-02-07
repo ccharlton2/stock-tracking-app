@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stocks Info</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <header class="app-header">
@@ -14,14 +16,19 @@
     </header>
     <main>
       <form id="search" class="search-api">
-        <div class="control">  <label for="searchTerm">Stock Symbol</label>
-            <input id="searchTerm" type="text" placeholder="ex: IBM" required>
+        <div class="card">  
+            <label for="searchTerm">Stock Symbol</label>
+            <input class="search-bar" id="searchTerm" type="text" placeholder="ex: IBM" required>
+            <button class="button">search</button></div>             
         </div>             
-        <button class="button">search</button></div>                
-      </form>   
+      </form>
      <!-- CONTAINER FOR SEARCH RESULTS -->
       <aside id="results" class="card">      
-      </aside>           
+      </aside>
+      
+      <p class="card">If a valid stock symbol is entered, the latest information of the day it was last traded will be returned. Weekends are not recorded.
+        <a href="https://finance.yahoo.com/lookup">Symbol Lookup</a>       
+      </p>
     </main>
     <script src="js/index.js"></script>
   </body>
