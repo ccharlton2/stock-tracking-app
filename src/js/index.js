@@ -7,5 +7,3 @@ const model = new AVModel();
 const searchView = new SearchView('#search');
 const resultView = new ResultsView('#results');
 const searchController = new SearchController(model, searchView, resultView)
-
-console.log(searchController);

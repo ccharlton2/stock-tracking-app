@@ -3,7 +3,6 @@ function SearchView(viewId) {
     this.view = document.querySelector(viewId);
 
     this.configUI = function () {
-        console.log("Search View Config");
     }
 
     return this;
